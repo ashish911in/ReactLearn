@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { blogs as BlogList } from "./blogs";
+import { blogs as BlogList } from "./blogs"; // Issue is here
 
 const Home = () => {
     let arrBlogs = [
