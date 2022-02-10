@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { blogs as BlogList } from "./blogs"; // Issue is here
+import BlogList from "./blogs";
 
 const Home = () => {
     let arrBlogs = [
@@ -16,7 +16,7 @@ const Home = () => {
         <div className="home">
             <h2>Home Page</h2>
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
-            ))
+            
         </div>
      );
 }
