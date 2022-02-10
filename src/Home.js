@@ -16,7 +16,7 @@ const Home = () => {
         <div className="home">
             <h2>Home Page</h2>
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
-            ))}
+            ))
         </div>
      );
 }
