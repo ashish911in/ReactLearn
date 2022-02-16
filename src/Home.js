@@ -13,16 +13,19 @@ const Home = () => {
         setBlogs(newBlogs);
     }
 
+    const [name, setName] = useState('Mario');
+
     useEffect(() => {
         console.log('use effect ran');
-        console.log(blogs);
-    });
+        console.log(name);
+    }, [name]);
 
     return ( 
         <div className="home">
             <h2>Home Page</h2>
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
-            
+            <button onClick={() => setName('Luigi')}>Change Name</button>
+            <p>{ name }</p>
         </div>
      );
 }
