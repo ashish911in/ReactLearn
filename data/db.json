@@ -1,0 +1,15 @@
+{
+    "blogs": [
+        {
+            "title":"Hi', body:'Lorem ipsum dolor sit amet", 
+            "author":"some", 
+            "id": "1"
+        },
+        {
+            "title":"Yes", 
+            "body":"Lorem ipsmet", 
+            "author":"any", 
+            "id": "2"
+        }
+    ]
+}
