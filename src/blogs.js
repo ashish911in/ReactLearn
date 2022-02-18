@@ -8,8 +8,8 @@ const blogs = ({ blogs, title, handleDelete }) => {
                 <h3> {`${blog.title}`} </h3>
                 <p>Written by { blog.author }</p>
                 <button onClick={() => handleDelete(blog.id)}>delete blog</button>
-        </div>
-      ))}
+            </div>
+        ))}
         </div>
     );
 };

@@ -8,6 +8,8 @@ const Home = () => {
     ];
     
     const [blogs, setBlogs] = useState(null);
+    const [isPending, setPending] = useState(true);
+
     const handleDelete = (id) => {
         const newBlogs = blogs.filter( blog => blog.id !== id );
         setBlogs(newBlogs);
@@ -21,10 +23,15 @@ const Home = () => {
         console.log(blogs);
         fetch('http://localhost:8000/blogs')
         .then(res => {
-            // console.log(res.json());
+            console.log(res);
             return res.json();
         }).then(data => {
-            setBlogs(data);
+            
+            setTimeout(()=>{
+                setBlogs(data);
+                setPending(false);
+            }, 2000);
+            
         }).catch(e => {
             console.log(`${e.message}`);
         })
@@ -33,6 +40,7 @@ const Home = () => {
     return ( 
         <div className="home">
             <h2>Home Page</h2>
+            { isPending && <div>Loading ... </div> }
             { blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} /> }
             {/* <button onClick={() => setName('Luigi')}>Change Name</button>
             <p>{ name }</p> */}
